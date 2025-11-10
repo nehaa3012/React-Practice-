@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import Cards from './assets/components/Cards'
+import Navbar from './assets/components/Navbar'
 function App() {
-  const [count, setCount] = useState(0)
+ 
   const data = [
   {
     name: "Amazon",
@@ -86,13 +87,16 @@ function App() {
 ];
 
   return (
-    <div className="flex flex-wrap gap-4 p-4">
+    <>
+    <Navbar />
+    <div className="flex flex-wrap gap-3 p-4">
       {data.map((item,index)=>{
         return <Cards data={item} key={index} />
       })}
     </div>
+    </>
   )
 }
 
-export default App
 
+export default App
